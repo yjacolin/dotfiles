@@ -1,0 +1,9 @@
+[projects."/home/yjacolin/Documents/Developpement/Yjacolin/QMapfileEditor/qgis2map"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "model", "reasoning", "project-name", "run-state", "permissions", "approval-mode", "context-used", "five-hour-limit", "weekly-limit", "context-window-size"]
+status_line_use_colors = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 1

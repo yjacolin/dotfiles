@@ -1,0 +1,9 @@
+.codex/installation_id
+.codex/logs*
+.codex/sessions
+.codex/auth.json
+.codex/state*
+.codex/goals*
+.codex/memories*
+.codex/cache/
+.codex/tmp/
