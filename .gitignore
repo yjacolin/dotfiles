@@ -7,5 +7,8 @@
 .codex/memories*
 .codex/cache/
 .codex/tmp/
+.fonts/ttf-dejavu-powerline
 # local history length
 .vim/.netrwhist 
+# submodules
+.codex/.tmp/plugins/
