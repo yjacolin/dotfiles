@@ -27,3 +27,22 @@
     autosetupmerge = false
 [push]
     default = nothing
+#[http]
+#    #proxy = https://10.0.4.2:3128
+#    proxy = http://proxy.capc-chatellerault.fr:3128/
+[diff "sopsdiffer"]
+	textconv = sops -d
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential]
+	helper = cache --timeout 21600
+	helper = oauth
+[credential "https://gitlab.strasbourg.cloud"]
+	oauthClientId = f3a77460bf717d2ef82402dc1591beba55d623c6220dffd28b1779f48cf20541
+  	oauthScopes = read_repository write_repository
+	oauthAuthURL = /oauth/authorize
+	oauthTokenURL = /oauth/token
+	oauthDeviceAuthURL = /oauth/authorize_device

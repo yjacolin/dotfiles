@@ -7,3 +7,5 @@
 .codex/memories*
 .codex/cache/
 .codex/tmp/
+# local history length
+.vim/.netrwhist 

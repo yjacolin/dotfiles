@@ -46,18 +46,17 @@ fi
 
 #alias python='/usr/bin/python3.5'
 
-# added by travis gem
-[ -f /home/yjacolin/.travis/travis.sh ] && source /home/yjacolin/.travis/travis.sh
-
-
 # Gopass
-_gopass_bash_autocomplete() {
-     local cur opts base
-     COMPREPLY=()
-     cur="${COMP_WORDS[COMP_CWORD]}"
-     opts=$( ${COMP_WORDS[@]:0:$COMP_CWORD} --generate-bash-completion )
-     local IFS=$'\n'
-     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-     return 0
- }
+export GPG_TTY=$(tty)
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+source ~/gitstatus/gitstatus.prompt.sh
+source <(gopass completion bash)
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# OpenClaw Completion
+source "/home/yjacolin/.openclaw/completions/openclaw.bash"
